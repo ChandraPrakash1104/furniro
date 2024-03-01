@@ -16,7 +16,7 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
       sizeStyle = 'text-base p-4';
       break;
     case 'large':
-      sizeStyle = 'text-lg px-6 py-2 md:px-12 md:py-4 font-semibold ';
+      sizeStyle = 'text-md px-6 py-2 md:px-12 md:py-4 font-semibold ';
       break;
     default:
       break;

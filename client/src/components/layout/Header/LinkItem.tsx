@@ -7,8 +7,8 @@ const LinkItem = (props: { destination: string; label: string }) => {
       className={({ isActive }) =>
         (isActive
           ? 'underline transform scale-105 lg:no-underline lg:bg-gray-300'
-          : 'lg:hover:bg-gray-200 py-2 px-4 lg:active:bg-gray-300  transition-all') +
-        ' py-2 px-4 transition-transform '
+          : 'lg:hover:bg-gray-200 lg:active:bg-gray-300  transition-all') +
+        ' py-1 px-4 transition-transform text-base font-medium'
       }
     >
       {props.label}

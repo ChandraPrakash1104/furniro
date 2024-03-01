@@ -1,10 +1,14 @@
 import { redirect } from 'react-router-dom';
 import Banner from './Banner/Banner';
+import BrowseRange from './BrowseRange/BrowseRange';
 
 const Home = () => {
   return (
     <main>
       <Banner />
+      <section className=''>
+        <BrowseRange />
+      </section>
     </main>
   );
 };

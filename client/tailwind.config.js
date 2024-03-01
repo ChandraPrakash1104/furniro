@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './src/styles/customUtilities.css',
+  ],
   theme: {
     extend: {
       colors: {
@@ -11,6 +15,11 @@ export default {
         'red-accents': '#E97171',
         'light-bg': '#F4F5F7',
         'box-color': '#FFF3E3',
+        'faded-font': '#666666',
+      },
+
+      margin: {
+        'side-gap': '1.5rem',
       },
     },
   },

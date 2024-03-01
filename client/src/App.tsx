@@ -12,6 +12,7 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import './App.css';
 import { loader as redirectToHome } from './components/pages/Home/Home';
+import './styles/customUtilities.css';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
