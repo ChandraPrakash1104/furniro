@@ -7,6 +7,7 @@ import { useState } from 'react';
 import HeaderLinks from './HeaderLinks';
 import Modal from '../../common/Modal/Modal';
 import SearchBar from '../../common/SearchBar/SearchBar';
+import { NavLink } from 'react-router-dom';
 
 const HeaderItems = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +23,18 @@ const HeaderItems = () => {
   };
 
   return (
-    <ul className='flex justify-around items-center cursor-pointer select-none md:justify-end md:space-x-4 lg:justify-center lg:space-x-8 xl:space-x-12'>
-      <li className='active:bg-gray-200 px-1 py-1  '>
-        <img src={userIcon} alt='profile' className='w-5' />
+    <ul className='flex justify-around items-center cursor-pointer select-none md:justify-end md:space-x-4 lg:justify-center lg:space-x-8 xl:space-x-12 lg:col-span-2 xl:col-span-1'>
+      <li className='active:bg-gray-200 px-1 py-1'>
+        <div className='flex'>
+          <img src={userIcon} alt='profile' className='w-5' />
+          <NavLink to='/login'>
+            <div className='text-sm hidden lg:block text-balance'>
+              Login or signup
+            </div>
+          </NavLink>
+        </div>
       </li>
+
       {!isSearchOpen && (
         <li
           className='active:bg-gray-200 px-1 py-1  '
@@ -36,7 +45,7 @@ const HeaderItems = () => {
       )}
       {isSearchOpen && (
         <Modal onClick={handleSeachClick}>
-          <div className='w-[90vw] fixed left-5 top-5 bg-white '>
+          <div className='w-[90%] md:w-[50%] lg:w-[30%] mx-auto my-4'>
             <SearchBar onChange={() => {}} placeholder='Search' />
           </div>
         </Modal>
@@ -56,12 +65,11 @@ const HeaderItems = () => {
 
       {isMenuOpen && (
         <Modal onClick={handleMenuClick}>
-          <div className='bg-white w-44 fixed top-0 right-0 pl-8 py-8 lg:hidden'>
+          <div className='bg-white w-48 fixed top-0 right-0 pl-8 py-12 h-full lg:hidden'>
             <HeaderLinks onClick={handleMenuClick} />
           </div>
         </Modal>
       )}
-      {/* </div> */}
     </ul>
   );
 };

@@ -14,7 +14,7 @@ const SearchBar = ({
   };
 
   return (
-    <div className='flex items-center border border-gray-400 p-2 bg-white'>
+    <div className='flex items-center border border-gray-400 p-2 bg-white min-w-[300px]'>
       <input
         type='text'
         className='w-full focus:outline-none text-sm'

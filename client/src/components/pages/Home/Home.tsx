@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main>
       <Banner />
-      <section className=''>
+      <section>
         <BrowseRange />
       </section>
     </main>

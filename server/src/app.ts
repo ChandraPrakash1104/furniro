@@ -5,6 +5,6 @@ const app: Express = express();
 
 app.use(express.json());
 
-app.use('/api', router);
+app.use('/api/v1', router);
 
 export default app;

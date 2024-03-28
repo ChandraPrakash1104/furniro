@@ -1,6 +1,6 @@
 const ModalOverlay = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='fixed bg-white z-30'>
+    <div className='fixed z-30 min-w-[300px] w-full'>
       <div>{children}</div>
     </div>
   );

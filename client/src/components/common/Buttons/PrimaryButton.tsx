@@ -1,10 +1,11 @@
 interface PrimaryButtonProps {
   label: string;
   size: 'small' | 'medium' | 'large';
+  styles?: string;
 }
 
 const PrimaryButton = (props: PrimaryButtonProps) => {
-  const { label, size } = props;
+  const { label, size, styles } = props;
 
   let sizeStyle = '';
 
@@ -13,7 +14,7 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
       sizeStyle = 'text-sm px-2 py-1';
       break;
     case 'medium':
-      sizeStyle = 'text-base p-4';
+      sizeStyle = 'text-base px-4 py-2';
       break;
     case 'large':
       sizeStyle = 'text-md px-6 py-2 md:px-12 md:py-4 font-semibold ';
@@ -23,7 +24,11 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
   }
 
   return (
-    <button className={`bg-primary text-white ${sizeStyle}`}>{label}</button>
+    <button
+      className={`bg-primary hover:bg-primary-dark transition-all text-white ${sizeStyle} ${styles}`}
+    >
+      {label}
+    </button>
   );
 };
 

@@ -3,6 +3,6 @@
 
 @layer utilities {
   .side-gap {
-    @apply mx-;
+    @apply mx-48;
   }
 }
